@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+
+import sys
+import os
+
+argn = len(sys.argv)
+
+if argn != 2:
+	raise SystemExit('We need 1 and only 1 arguement(question name)')
+fileName = sys.argv[1]
+
+TEMPFILE = ""
+
+header = '"""\nID: espoir.1\nLANG: PYTHON3\n'
+header += 'TASK: {task}\n"""\n'.format(task = fileName)
+
+TEMPFILE += header
+TEMPFILE += '\n'
+TEMPFILE += 'class Constants():\n'
+TEMPFILE += '#Define constans here with @staticmethod functions\n\n'
+TEMPFILE += "# Go get 'em tiger\n"
+
+os.mknod(fileName + '.in')
+os.mknod(fileName + '.out')
+os.mknod(fileName + '.py')
+
+with open(fileName + '.py', 'w') as yaz:
+	yaz.write(TEMPFILE)
+# creates filename.in filename.out filename.py files 
+# fills filename.py with the output below.
+
+# """
+# ID: espoir.1
+# LANG: PYTHON3
+# TASK: ride
+# """
+#
+# class Constatns():
+# # Define constans here with @staticmethod functions
+#
+# # Go get 'em tiger
