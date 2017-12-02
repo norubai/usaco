@@ -1,3 +1,3 @@
-# ReadMe
+# Python
 
-Trying to get used to python3 via solving problems from usaco.
+Solving problems from usaco in order to get used to python.
